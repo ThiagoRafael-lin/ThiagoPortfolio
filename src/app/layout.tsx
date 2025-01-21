@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${comfortaa.variable} ${Work_Sans.variable} antialiased bg-[#171717] px-[20px] py-[10px]`}
+        className={`${comfortaa.variable} ${Work_Sans.variable} antialiased no-scrollbar bg-[#171717] px-[20px] py-[10px]`}
       >
         {children}
       </body>
