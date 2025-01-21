@@ -28,7 +28,7 @@ export const Header = () => {
 
         <div className="flex flex-row gap-5">
           <Button
-            className="border-[#fff] bg-[#000] text-[#fff] rounded-[12px] font-comfortaa"
+            className="border-[#fff] bg-[#000] text-[#fff] rounded-none font-comfortaa"
             variant="outline"
           >
             <Image src={DownloadIcon} width={15} alt="Icone de download" />
@@ -44,7 +44,7 @@ export const Header = () => {
           <form className="max-w-sm mx-auto">
             <select
               id="countries"
-              className="bg-transparent border border-[#fff] text-[#fff] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-transparent border border-[#fff] text-[#fff] text-sm rounded-none focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
               <option value="pt" className="text-[black]">
                 pt

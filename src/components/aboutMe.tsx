@@ -10,7 +10,7 @@ export const AboutMe = () => {
         About <span className="text-azul">me</span>
       </h2>
       <Button
-        className="border-[#fff] bg-[#000] text-[#fff] rounded-[12px] font-comfortaa"
+        className="border-[#fff] bg-[#000] text-[#fff] rounded-none font-comfortaa"
         variant="outline"
       >
         <Image src={DownloadIcon} width={15} alt="Icone de download" />
@@ -18,7 +18,7 @@ export const AboutMe = () => {
       </Button>
 
       <div className="flex flex-col text-[#fff] font-comfortaa text-[16px]">
-        <div className="flex bg-[#101010] rounded-[12px] py-4 mt-8">
+        <div className="flex bg-[#101010] py-4 mt-8">
           <div className="w-60">
             <p className="pl-4">Age</p>
           </div>
@@ -27,7 +27,7 @@ export const AboutMe = () => {
           </div>
         </div>
 
-        <div className="flex rounded-[12px] py-4 my-6">
+        <div className="flex py-4 my-6">
           <div className="w-60">
             <p className="pl-4">Residence</p>
           </div>
@@ -36,7 +36,7 @@ export const AboutMe = () => {
           </div>
         </div>
 
-        <div className="flex bg-[#101010] rounded-[12px] py-4">
+        <div className="flex bg-[#101010] py-4">
           <div className="w-60">
             <p className="pl-4">E-mail</p>
           </div>
@@ -45,7 +45,7 @@ export const AboutMe = () => {
           </div>
         </div>
 
-        <div className="flex rounded-[12px] py-4 my-6">
+        <div className="flex py-4 my-6">
           <div className="w-60">
             <p className="pl-4">Phone</p>
           </div>
@@ -54,7 +54,7 @@ export const AboutMe = () => {
           </div>
         </div>
 
-        <div className="flex bg-[#101010] rounded-[12px] py-4">
+        <div className="flex bg-[#101010] py-4">
           <div className="w-60">
             <p className="pl-4">Freelance</p>
           </div>

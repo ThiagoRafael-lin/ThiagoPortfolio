@@ -1,9 +1,16 @@
-export const BoxSkillTools = () => {
+import React from "react";
+
+type Props = {
+  tech?: string;
+  number?: string;
+};
+
+export const BoxSkillTools = ({ tech, number }: Props) => {
   return (
     <div>
-      <div className="flex flex-col items-center border rounded-[12px] px-28 py-5 font-comfortaa">
-        <p className="text-[32px]">70%</p>
-        <p className="text-[16px]">html</p>
+      <div className="flex flex-col items-center border  px-24 py-5 font-comfortaa">
+        <p className={`text-[32px] ${number}`}>{number}</p>
+        <p className={`text-[16px] ${tech}`}>{tech}</p>
       </div>
     </div>
   );
