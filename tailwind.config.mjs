@@ -60,6 +60,7 @@ export default {
     },
     fontFamily: {
       comfortaa: ["var(--font-comfortaa)"],
+      comfortaaBold: ["var(--font-comfortaaBold)"],
     },
   },
   plugins: [require("tailwindcss-animate")],

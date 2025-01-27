@@ -4,12 +4,12 @@ import { Button } from "./ui/button";
 
 export const Header = () => {
   return (
-    <div className="text-black flex justify-center gap-96 font-comfortaa items-center mt-6">
+    <div className="text-black flex justify-center gap-96 font-comfortaa items-center pt-4">
       <Image src={LogoThiago} width={80} alt="Logo do Thiago Rafael" />
       <div className="flex gap-6">
         <a
           href=""
-          className="hover:text-gray-400 hover:underline transition-all delay-75 "
+          className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           Projects
           <span></span>
