@@ -4,8 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
-import { Header } from "@/components/Header";
-import { useGSAP } from "@gsap/react";
+import { Header } from "@/components/header";
 
 gsap.registerPlugin(ScrollTrigger);
 
