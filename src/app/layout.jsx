@@ -21,9 +21,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body
-        className={`${Comfortaa.variable} ${ComfortaaBold.variable} antialiased bg-slate-50`}
+        className={`${Comfortaa.variable} ${ComfortaaBold.variable} antialiased bg-slate-50 hide-scrollbar`}
       >
         {children}
       </body>
