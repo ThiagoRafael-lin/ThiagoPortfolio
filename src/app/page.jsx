@@ -76,7 +76,7 @@ export default function Home() {
   // });
 
   return (
-    <div className="scroll-smooth">
+    <div>
       <div ref={HeaderRef}>
         <Header />
       </div>
