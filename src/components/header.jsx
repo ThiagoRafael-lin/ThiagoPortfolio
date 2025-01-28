@@ -12,7 +12,6 @@ export const Header = () => {
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           Projects
-          <span></span>
         </a>
         <a
           href=""
