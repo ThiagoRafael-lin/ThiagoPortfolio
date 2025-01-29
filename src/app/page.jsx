@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
 import { Header } from "@/components/header"; //Possivel erro no header na hora de deploy
 import { useGSAP } from "@gsap/react";
+import { Skills } from "@/components/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +24,7 @@ export default function Home() {
         opacity: 0,
         y: -100,
       },
-      { opacity: 1, y: 0, duration: 1, delay: 2 }
+      { opacity: 1, y: 0, delay: 1.5 }
     );
   }, []);
 

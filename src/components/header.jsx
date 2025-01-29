@@ -13,7 +13,7 @@ export const Header = () => {
   const buttonRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { duration: 1 } });
+    const tl = gsap.timeline({ defaults: { duration: 0.7 } });
 
     const header = HeaderRef.current;
     const sideItens = sideItensRef.current;
@@ -21,7 +21,7 @@ export const Header = () => {
 
     tl.fromTo(header, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
       .fromTo(sideItens, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
-      .fromTo(button, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=1.1");
+      .fromTo(button, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.7");
   }, []);
 
   return (
@@ -46,7 +46,7 @@ export const Header = () => {
           Skills
         </Link>
         <Link
-          href=""
+          href="/tela-about"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           About Me
