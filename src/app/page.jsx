@@ -6,25 +6,36 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
 import { Header } from "@/components/header"; //Possivel erro no header na hora de deploy
 import { useGSAP } from "@gsap/react";
-import { Skills } from "@/components/Skills";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const NameRef = useRef(null);
+  const nameRef = useRef(null);
+  const professionRef = useRef(null);
   const scrollRefLeft = useRef(null);
   const scrollRefRight = useRef(null);
 
   useEffect(() => {
-    const name = NameRef.current;
+    const tl = gsap.timeline({ defaults: { duration: 0.7 } });
 
-    gsap.fromTo(
+    const name = nameRef.current;
+    const profession = professionRef.current;
+
+    tl.fromTo(
       name,
       {
         opacity: 0,
-        y: -100,
+        y: 100,
       },
-      { opacity: 1, y: 0, delay: 1.5 }
+      { opacity: 1, y: 0, delay: 0.5 }
+    ).fromTo(
+      profession,
+      {
+        opacity: 0,
+        y: 100,
+      },
+      { opacity: 1, y: 0 },
+      "-=0.7"
     );
   }, []);
 
@@ -38,7 +49,7 @@ export default function Home() {
           trigger: projectLeft,
           start: "-20%, center",
           end: "top 20%",
-          // markers: true,
+          markers: true,
           scrub: true,
         },
       });
@@ -67,10 +78,13 @@ export default function Home() {
       <Header />
       <div
         className="flex h-screen flex-col items-center justify-center gap-7 pb-32 border-b-2"
-        ref={NameRef}
+        ref={nameRef}
       >
         <h2 className="text-black text-8xl font-comfortaa">Thiago Rafael</h2>
-        <p className="font-comfortaa text-3xl text-gray-400">
+        <p
+          ref={professionRef}
+          className="font-comfortaa text-3xl text-gray-400"
+        >
           Desenvolvedor FullStack
         </p>
       </div>

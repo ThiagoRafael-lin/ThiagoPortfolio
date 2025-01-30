@@ -40,25 +40,27 @@ export const Header = () => {
           Projects
         </Link>
         <Link
-          href="/tela-skills"
+          href="/screen-skills"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           Skills
         </Link>
         <Link
-          href="/tela-about"
+          href="/screen-about"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           About Me
         </Link>
       </div>
-      <Button
-        ref={buttonRef}
-        className="bg-transparent border-black  text-black rounded-lg font-comfortaa "
-        variant="outline"
-      >
-        Contact
-      </Button>
+      <Link href="/screen-contact">
+        <Button
+          ref={buttonRef}
+          className="bg-transparent border-black  text-black rounded-lg font-comfortaa "
+          variant="outline"
+        >
+          Contact
+        </Button>
+      </Link>
     </nav>
   );
 };
