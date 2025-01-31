@@ -15,7 +15,7 @@ export const ProjectsLeft = ({
   tech5,
 }) => {
   return (
-    <div className="flex flex-row w-full 500 items-center pb-24 pt-24 px-12 opacity-0">
+    <div className="flex flex-row w-full 500 items-center pb-24 pt-24 px-12">
       <Image
         src={JogoSecreto}
         width={500}
@@ -78,7 +78,7 @@ export const ProjectsRight = ({
   tech5,
 }) => {
   return (
-    <div className="flex flex-row items-center w-full pb-24 px-12 opacity-0">
+    <div className="flex flex-row items-center w-full pb-24 px-12">
       <div className="font-comfortaa pr-12 flex flex-col  gap-6 text-end">
         <h2 className="font-comfortaaBold text-2xl text-[#211184]">{title}</h2>
         <p>{description}</p>

@@ -26,15 +26,23 @@ export const Header = () => {
 
   return (
     <nav className="text-black flex justify-center gap-96 font-comfortaa items-center pt-4">
-      <Image
-        ref={sideItensRef}
-        src={LogoThiago}
-        width={80}
-        alt="Logo do Thiago Rafael"
-      />
+      <Link href="/">
+        <Image
+          ref={sideItensRef}
+          src={LogoThiago}
+          width={80}
+          alt="Logo do Thiago Rafael"
+        />
+      </Link>
       <div ref={HeaderRef} className="flex gap-6">
         <Link
           href="/"
+          className="hover:text-gray-400 hover:underline transition-all delay-75"
+        >
+          Home
+        </Link>
+        <Link
+          href="/screen-projects"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
           Projects
@@ -55,7 +63,7 @@ export const Header = () => {
       <Link href="/screen-contact">
         <Button
           ref={buttonRef}
-          className="bg-transparent border-black  text-black rounded-lg font-comfortaa "
+          className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
           variant="outline"
         >
           Contact

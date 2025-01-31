@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
 import { Header } from "@/components/header"; //Possivel erro no header na hora de deploy
 import { useGSAP } from "@gsap/react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,45 +41,46 @@ export default function Home() {
     );
   }, []);
 
-  useGSAP(() => {
-    const project = gsap.utils.toArray(scrollRefLeft.current.children);
+  // useGSAP(() => {
+  //   const project = gsap.utils.toArray(scrollRefLeft.current.children);
 
-    project.forEach((projectLeft) => {
-      gsap.to(projectLeft, {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: projectLeft,
-          start: "-20%, center",
-          end: "top 20%",
-          markers: true,
-          scrub: true,
-        },
-      });
-    });
-  });
+  //   project.forEach((projectLeft) => {
+  //     gsap.to(projectLeft, {
+  //       opacity: 1,
+  //       scrollTrigger: {
+  //         trigger: projectLeft,
+  //         start: "-20%, center",
+  //         end: "top 20%",
+  //         markers: true,
+  //         scrub: true,
+  //       },
+  //     });
+  //   });
+  // });
 
-  useGSAP(() => {
-    const project = gsap.utils.toArray(scrollRefRight.current.children);
+  // useGSAP(() => {
+  //   const project = gsap.utils.toArray(scrollRefRight.current.children);
 
-    project.forEach((projectRight) => {
-      gsap.to(projectRight, {
-        opacity: 1,
-        scrollTrigger: {
-          trigger: projectRight,
-          start: "-20%, center",
-          end: "top 20%",
-          // markers: true,
-          scrub: true,
-        },
-      });
-    });
-  });
+  //   project.forEach((projectRight) => {
+  //     gsap.to(projectRight, {
+  //       opacity: 1,
+  //       scrollTrigger: {
+  //         trigger: projectRight,
+  //         start: "-20%, center",
+  //         end: "top 20%",
+  //         // markers: true,
+  //         scrub: true,
+  //       },
+  //     });
+  //   });
+  // });
 
   return (
     <div>
       <Header />
       <div
-        className="flex h-screen flex-col items-center justify-center gap-7 pb-32 border-b-2"
+        className="flex flex-col items-center justify-center gap-7 pt-48
+        "
         ref={nameRef}
       >
         <h2 className="text-black text-8xl font-comfortaa">Thiago Rafael</h2>
@@ -87,33 +90,21 @@ export default function Home() {
         >
           Desenvolvedor FullStack
         </p>
-      </div>
-      <div>
-        <div ref={scrollRefLeft}>
-          <ProjectsLeft
-            title={"Jogo do número secreto"}
-            description={
-              "SecretNumberQuest é um jogo simples onde o objetivo do usuário é descobrir um número secreto gerado aleatoriamente. O jogo foi desenvolvido com HTML, CSS e JavaScript, e serve como um exercício de lógica e manipulação de eventos."
-            }
-            tech1={"html"}
-            tech2={"css"}
-            tech3={"javascript"}
-            tech4={"visual studio code"}
-            tech5={"lógica de programação"}
-          />
-        </div>
-        <div ref={scrollRefRight}>
-          <ProjectsRight
-            title={"Jogo do número secreto"}
-            description={
-              "SecretNumberQuest é um jogo simples onde o objetivo do usuário é descobrir um número secreto gerado aleatoriamente. O jogo foi desenvolvido com HTML, CSS e JavaScript, e serve como um exercício de lógica e manipulação de eventos."
-            }
-            tech1={"html"}
-            tech2={"css"}
-            tech3={"javascript"}
-            tech4={"visual studio code"}
-            tech5={"lógica de programação"}
-          />
+        <div className="flex gap-6">
+          <Button
+            className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
+            variant="outline"
+          >
+            Download curriculum
+          </Button>
+          <Link href="/screen-projects">
+            <Button
+              className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
+              variant="outline"
+            >
+              Projetos
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
