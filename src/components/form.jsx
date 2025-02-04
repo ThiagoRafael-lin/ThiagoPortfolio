@@ -1,7 +1,8 @@
 "use client";
 
 import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export function FormContact() {
   const titleRef = useRef(null);
@@ -33,6 +34,37 @@ export function FormContact() {
       .fromTo(button, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.5");
   }, []);
 
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_5r1wdw5";
+    const templateId = "template_8lrexfu";
+    const publicKey = "YIEsMGGQTFZ7RAgLq";
+
+    const templateParams = {
+      from_email: email,
+      from_subject: subject,
+      to_name: "de TinasRafael",
+      message: message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email enviado com sucesso", response);
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.error("erro ao enviar seu email", error);
+      });
+  };
+
   return (
     <section className="dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -48,7 +80,8 @@ export function FormContact() {
         >
           Interested in collaborating? Have a project in mind? Get in touch!
         </p>
-        <form action="#" className="space-y-8">
+
+        <form action="#" onSubmit={handleSubmit} className="space-y-8">
           <div ref={emailRef}>
             <label
               htmlFor="email"

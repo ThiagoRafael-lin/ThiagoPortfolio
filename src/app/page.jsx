@@ -5,9 +5,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
 import { Header } from "@/components/header"; //Possivel erro no header na hora de deploy
-import { useGSAP } from "@gsap/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,7 +95,9 @@ export default function Home() {
             className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
             variant="outline"
           >
-            Download curriculum
+            <a href="/ThiagoDominguesRafael.pdf" download>
+              Download curriculum
+            </a>
           </Button>
           <Link href="/screen-projects">
             <Button
