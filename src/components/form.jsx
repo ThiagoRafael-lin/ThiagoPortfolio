@@ -47,15 +47,14 @@ export function FormContact() {
 
     const templateParams = {
       from_email: email,
-      from_subject: subject,
-      to_name: "de TinasRafael",
+      Subject: subject,
       message: message,
     };
 
     emailjs
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
-        console.log("Email enviado com sucesso", response);
+        console.log("Email enviado com sucesso", templateParams, response);
         setEmail("");
         setSubject("");
         setMessage("");
@@ -95,6 +94,8 @@ export function FormContact() {
               className="font-comfortaa shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="your.email@example.com"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             ></input>
           </div>
           <div ref={subjectRef}>
@@ -110,6 +111,8 @@ export function FormContact() {
               className="font-comfortaa block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Project Inquiry or Collaboration"
               required
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
             ></input>
           </div>
           <div ref={messageRef} className="sm:col-span-2">
@@ -124,6 +127,8 @@ export function FormContact() {
               rows="6"
               className="font-comfortaa block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Tell me about your project or needs."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
           </div>
           <button

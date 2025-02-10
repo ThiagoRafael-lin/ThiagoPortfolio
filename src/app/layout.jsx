@@ -15,7 +15,7 @@ const ComfortaaBold = localFont({
 });
 
 export const metadata = {
-  title: "ThiagoPorfolio",
+  title: "ThiagoRafael",
   description: "meu portfolio profissonal",
 };
 

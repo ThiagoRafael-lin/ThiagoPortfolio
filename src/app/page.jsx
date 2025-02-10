@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ProjectsLeft, ProjectsRight } from "@/components/Projects";
+import { ProjectsLeft, ProjectsRight } from "@/components/ProjectsLeft";
 import { Header } from "@/components/header"; //Possivel erro no header na hora de deploy
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
