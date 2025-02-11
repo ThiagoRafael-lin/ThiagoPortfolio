@@ -1,8 +1,8 @@
 "use client";
 
 import { Header } from "@/components/header";
-import { ProjectsLeft } from "@/components/ProjectsLeft";
-import { ProjectsRight } from "@/components/ProjectsRight";
+import { ProjectsOne } from "@/components/ProjectsOne";
+import { ProjectsTwo } from "@/components/ProjectsTwo";
 import gsap from "gsap/all";
 import { useEffect, useRef } from "react";
 
@@ -25,20 +25,22 @@ export default function Project() {
     <div>
       <Header />
       <div ref={LeftProjectRef}>
-        <ProjectsLeft
-          title={"Jogo do número secreto"}
+        <ProjectsOne
+          title={"Event+"}
           description={
-            "SecretNumberQuest é um jogo simples onde o objetivo do usuário é descobrir um número secreto gerado aleatoriamente. O jogo foi desenvolvido com HTML, CSS e JavaScript, e serve como um exercício de lógica e manipulação de eventos."
+            "O Event+ é um site para organização de eventos que facilita a criação, o gerenciamento e a divulgação de seus eventos. Com uma interface intuitiva e diversas funcionalidades, o Event+ torna o planejamento de eventos uma tarefa simples e eficiente."
           }
           tech1={"html"}
           tech2={"css"}
           tech3={"javascript"}
-          tech4={"visual studio code"}
-          tech5={"lógica de programação"}
+          tech4={"C#"}
+          tech5={"MySQL"}
+          tech6={"visual studio code"}
+          tech7={"visual studio community"}
         />
       </div>
       <div ref={RightProjectRef}>
-        <ProjectsRight
+        <ProjectsTwo
           title={"Jogo do número secreto"}
           description={
             "SecretNumberQuest é um jogo simples onde o objetivo do usuário é descobrir um número secreto gerado aleatoriamente. O jogo foi desenvolvido com HTML, CSS e JavaScript, e serve como um exercício de lógica e manipulação de eventos."

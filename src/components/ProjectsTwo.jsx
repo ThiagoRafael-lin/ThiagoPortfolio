@@ -6,7 +6,7 @@ import Link from "next/link";
 import EyeViewer from "@/assets/icons/eye-solid.svg";
 import Github from "@/assets/icons/github.svg";
 
-export const ProjectsRight = ({
+export const ProjectsTwo = ({
   title,
   description,
   tech1,
@@ -41,6 +41,7 @@ export const ProjectsRight = ({
           <Link
             className="flex gap-2 items-center hover:underline"
             href={"https://jogo-numero-secreto-beta-murex.vercel.app/"}
+            target="_blank"
           >
             <Image
               src={EyeViewer}
@@ -53,6 +54,7 @@ export const ProjectsRight = ({
           <Link
             className="flex gap-2 items-center hover:underline"
             href={"https://github.com/ThiagoRafael-lin/SecretNumberQuest.git"}
+            target="_blank"
           >
             <Image src={Github} width={25} alt="icone do github" />
             <p>Git Hub</p>
