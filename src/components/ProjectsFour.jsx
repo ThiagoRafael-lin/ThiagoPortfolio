@@ -1,19 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import Eteriali from "@/assets/image/Eteriali.png";
+import JogoSecreto from "@/assets/image/JogoSecreto.png";
 import Link from "next/link";
 
 import EyeViewer from "@/assets/icons/eye-solid.svg";
 import Github from "@/assets/icons/github.svg";
 
-export const ProjectsTwo = ({
-  title,
-  description,
-  tech1,
-  tech2,
-  tech3,
-  tech4,
-}) => {
+export const ProjectsFour = ({ title, description, tech1, tech2, tech3 }) => {
   return (
     <div className="flex flex-row items-center w-full pb-24 px-12">
       <div className="font-comfortaa pr-12 flex flex-col  gap-6 text-end">
@@ -29,14 +22,11 @@ export const ProjectsTwo = ({
           <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
             {tech3}
           </p>
-          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
-            {tech4}
-          </p>
         </div>
         <div className="flex gap-6 justify-end">
           <Link
             className="flex gap-2 items-center hover:underline"
-            href={"https://site-eteriali.vercel.app/"}
+            href={"https://jogo-numero-secreto-beta-murex.vercel.app/"}
             target="_blank"
           >
             <Image
@@ -49,7 +39,7 @@ export const ProjectsTwo = ({
           </Link>
           <Link
             className="flex gap-2 items-center hover:underline"
-            href={"https://github.com/ThiagoRafael-lin/SiteEteriali.git"}
+            href={"https://github.com/ThiagoRafael-lin/SecretNumberQuest.git"}
             target="_blank"
           >
             <Image src={Github} width={25} alt="icone do github" />
@@ -58,7 +48,7 @@ export const ProjectsTwo = ({
         </div>
       </div>
       <Image
-        src={Eteriali}
+        src={JogoSecreto}
         width={500}
         alt="Imagem do projeto numero secreto"
         className="rounded-xl"

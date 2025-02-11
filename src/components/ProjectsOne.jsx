@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Event from "@/assets/image/Event+.png";
+import NextTalent from "@/assets/image/NextTalent.png";
 import Link from "next/link";
 
 import EyeViewer from "@/assets/icons/eye-solid.svg";
-import Github from "@/assets/icons/github.svg";
+import AzureDevOps from "@/assets/icons/devops preto.svg";
 
 export const ProjectsOne = ({
   title,
@@ -22,7 +22,7 @@ export const ProjectsOne = ({
   return (
     <div className="flex flex-row w-full 500 items-center pb-24 pt-24 px-12">
       <Image
-        src={Event}
+        src={NextTalent}
         width={500}
         alt="imagem da event plus"
         className="rounded-xl"
@@ -52,11 +52,14 @@ export const ProjectsOne = ({
           <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
             {tech7}
           </p>
+          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
+            {tech8}
+          </p>
         </div>
         <div className="flex gap-6">
           <Link
             className="flex gap-2 items-center hover:underline"
-            href={"https://event-plus-pi.vercel.app/"}
+            href={"https://next-talent.vercel.app/"}
             target="_blank"
           >
             <Image
@@ -69,11 +72,13 @@ export const ProjectsOne = ({
           </Link>
           <Link
             className="flex gap-2 items-center hover:underline"
-            href={"https://github.com/ThiagoRafael-lin/Event-Plus.git"}
+            href={
+              "https://dev.azure.com/NextTalent/_git/NextTalent?path=%2F&version=GBmain&_a=contents"
+            }
             target="_blank"
           >
-            <Image src={Github} width={25} alt="icone do github" />
-            <p>Git Hub</p>
+            <Image src={AzureDevOps} width={25} alt="icone do Azure DevOps" />
+            <p>Azure DevOps</p>
           </Link>
         </div>
       </div>
