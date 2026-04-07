@@ -1,12 +1,14 @@
 "use client";
 
-import { Header } from "@/components/header";
+import dynamic from "next/dynamic";
 import { ProjectsFour } from "@/components/ProjectsFour";
 import { ProjectsOne } from "@/components/ProjectsOne";
 import { ProjectsThree } from "@/components/ProjectsThree";
 import { ProjectsTwo } from "@/components/ProjectsTwo";
 import gsap from "gsap/all";
 import { useEffect, useRef } from "react";
+
+const Header = dynamic(() => import("@/components/header").then(mod => ({ default: mod.Header })), { ssr: false });
 
 export default function Project() {
   const OneProjectRef = useRef(null);

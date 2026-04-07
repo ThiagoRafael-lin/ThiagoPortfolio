@@ -1,8 +1,7 @@
 import React from "react";
 import "./globals.css";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { ToastProvider } from "@/context/ToastProvider";
+import { Providers } from "./providers";
 
 const Comfortaa = localFont({
   src: "../assets/fonts/Comfortaa-Regular.ttf",
@@ -27,11 +26,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${Comfortaa.variable} ${ComfortaaBold.variable} antialiased bg-slate-50 dark:bg-slate-900 hide-scrollbar transition-colors duration-300`}
       >
-        <ThemeProvider>
-          <ToastProvider>
-            {children}
-          </ToastProvider>
-        </ThemeProvider>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

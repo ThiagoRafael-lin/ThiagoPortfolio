@@ -4,10 +4,12 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ProjectsLeft, ProjectsRight } from "@/components/ProjectsOne";
-import { Header } from "@/components/header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import dynamic from "next/dynamic";
+
+const Header = dynamic(() => import("@/components/header").then(mod => ({ default: mod.Header })), { ssr: false });
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -24,10 +24,12 @@ export const Header = () => {
     const button = buttonRef.current;
     const themeButton = themeButtonRef.current;
 
-    tl.fromTo(header, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
-      .fromTo(sideItens, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
-      .fromTo(button, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.7")
-      .fromTo(themeButton, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.7");
+    if (header && sideItens && button && themeButton) {
+      tl.fromTo(header, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+        .fromTo(sideItens, { opacity: 0, y: -100 }, { opacity: 1, y: 0 })
+        .fromTo(button, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.7")
+        .fromTo(themeButton, { opacity: 0, y: -100 }, { opacity: 1, y: 0 }, "-=0.7");
+    }
   }, []);
 
   return (
