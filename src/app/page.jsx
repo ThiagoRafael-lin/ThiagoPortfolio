@@ -79,20 +79,19 @@ export default function Home() {
     <div>
       <Header />
       <div
-        className="flex flex-col items-center justify-center gap-7 pt-48
-        "
+        className="flex flex-col items-center justify-center gap-7 pt-48"
         ref={nameRef}
       >
-        <h2 className="text-black text-8xl font-comfortaa">Thiago Rafael</h2>
+        <h2 className="text-black dark:text-white text-8xl font-comfortaa">Thiago Rafael</h2>
         <p
           ref={professionRef}
-          className="font-comfortaa text-3xl text-gray-400"
+          className="font-comfortaa text-3xl text-gray-400 dark:text-gray-500"
         >
           Desenvolvedor FullStack
         </p>
-        <div className="flex gap-6">
+        <div className="flex gap-6 flex-col lg:flex-row">
           <Button
-            className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
+            className="bg-transparent border-black dark:border-white text-black dark:text-white rounded-lg font-comfortaa hover:bg-gray-100 dark:hover:bg-gray-800"
             variant="outline"
           >
             <a href="/ThiagoDominguesRafael.pdf" download>
@@ -101,7 +100,7 @@ export default function Home() {
           </Button>
           <Link href="/screen-projects">
             <Button
-              className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
+              className="bg-transparent border-black dark:border-white text-black dark:text-white rounded-lg font-comfortaa hover:bg-gray-100 dark:hover:bg-gray-800"
               variant="outline"
             >
               Projetos

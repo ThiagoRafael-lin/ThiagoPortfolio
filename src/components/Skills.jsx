@@ -43,15 +43,15 @@ export const Skills = () => {
   return (
     <div className="flex justify-center items-start pt-32 gap-12 flex-wrap">
       <div ref={backRef} className="flex flex-col items-center">
-        <h2 className="font-comfortaaBold text-2xl ">Backend</h2>
+        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Backend</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={csharp} width={40} alt="C#" />
-            <p className="text-center text-sm mt-2 font-comfortaa">C#</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">C#</p>
           </div>
           <div className="flex flex-col items-center">
             <Image src={mysql} width={40} alt="MySQL" />
-            <p className="text-center text-sm mt-2 font-comfortaa">MySQL</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">MySQL</p>
           </div>
           <div className="flex flex-col items-center">
             <Image
@@ -60,52 +60,52 @@ export const Skills = () => {
               alt="ASP.NET Core"
               className="rounded-full"
             />
-            <p className="text-center text-sm mt-2 font-comfortaa">ASP.NET</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">ASP.NET</p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl ">Ferramentas</h2>
+        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Ferramentas</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={git} width={40} alt="Git" />
-            <p className="text-center text-sm mt-2 font-comfortaa">Git</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Git</p>
           </div>
           <div className="flex flex-col items-center">
             <Image src={npm} width={40} alt="Npm" />
-            <p className="text-center text-sm mt-2 font-comfortaa">Npm</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Npm</p>
           </div>
         </div>
       </div>
 
       <div
         ref={frontRef}
-        className="flex flex-col items-center border-x-2 px-14"
+        className="flex flex-col items-center border-x-2 border-black dark:border-white px-14"
       >
-        <h2 className="font-comfortaaBold text-2xl ">Frontend</h2>
+        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Frontend</h2>
         <div className="flex flex-col gap-12 justify-center items-center py-12">
           <div className="flex gap-12">
             <div className="flex flex-col items-center">
               <Image src={html} width={40} alt="HTML" />
-              <p className="text-center text-sm mt-2 font-comfortaa">HTML</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">HTML</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={ccs} width={40} alt="CSS" />
-              <p className="text-center text-sm mt-2 font-comfortaa">CSS</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">CSS</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={javascript} width={40} alt="JavaScript" />
-              <p className="text-center text-sm mt-2 font-comfortaa">JS</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">JS</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={react} width={45} alt="React" />
-              <p className="text-center text-sm mt-2 font-comfortaa">React</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">React</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={next} width={40} alt="Next.js" />
-              <p className="text-center text-sm mt-2 font-comfortaa">Next</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Next</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={tailwind} width={40} alt="Tailwind CSS" />
-              <p className="text-center text-sm mt-2 font-comfortaa">
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">
                 Tailwind
               </p>
             </div>
@@ -118,15 +118,15 @@ export const Skills = () => {
                 alt="GSAP"
                 className="rounded-full"
               />
-              <p className="text-center text-sm mt-2 font-comfortaa">GSAP</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">GSAP</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={expo} width={40} alt="Expo" />
-              <p className="text-center text-sm mt-2 font-comfortaa">Expo</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Expo</p>
             </div>
             <div className="flex flex-col items-center">
               <Image src={shadcn} width={40} alt="Shadcn" />
-              <p className="text-center text-sm mt-2 font-comfortaa">Shadcn</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Shadcn</p>
             </div>
             <div className="flex flex-col items-center">
               <Image
@@ -135,7 +135,7 @@ export const Skills = () => {
                 alt="Axios"
                 className="rounded-full"
               />
-              <p className="text-center text-sm mt-2 font-comfortaa">Axios</p>
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">Axios</p>
             </div>
             <div className="flex flex-col items-center">
               <Image
@@ -143,7 +143,7 @@ export const Skills = () => {
                 width={40}
                 alt="Styled Components"
               />
-              <p className="text-center text-sm mt-2 font-comfortaa">
+              <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">
                 Styled-C
               </p>
             </div>
@@ -152,11 +152,11 @@ export const Skills = () => {
       </div>
 
       <div ref={ideRef} className="flex flex-col items-center">
-        <h2 className="font-comfortaaBold text-2xl">IDEs</h2>
+        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">IDEs</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={visualcode} width={40} alt="Visual Studio Code" />
-            <p className="text-center text-sm mt-2 font-comfortaa">VS Code</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">VS Code</p>
           </div>
           <div className="flex flex-col items-center">
             <Image
@@ -164,16 +164,16 @@ export const Skills = () => {
               width={40}
               alt="Visual Studio Community"
             />
-            <p className="text-center text-sm mt-2 font-comfortaa">
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">
               VS Community
             </p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl">Metodologias</h2>
+        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Metodologias</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={azureDevops} width={40} alt="Azure DevOps" />
-            <p className="text-center text-sm mt-2 font-comfortaa">DevOps</p>
+            <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">DevOps</p>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 
 export function FormContact() {
   const titleRef = useRef(null);
@@ -37,9 +38,11 @@ export function FormContact() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const serviceId = "service_5r1wdw5";
     const templateId = "template_8lrexfu";
@@ -55,17 +58,21 @@ export function FormContact() {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Email enviado com sucesso", templateParams, response);
+        toast.success("Email enviado com sucesso! 🎉");
         setEmail("");
         setSubject("");
         setMessage("");
+        setIsLoading(false);
       })
       .catch((error) => {
         console.error("erro ao enviar seu email", error);
+        toast.error("Erro ao enviar email. Tente novamente!");
+        setIsLoading(false);
       });
   };
 
   return (
-    <section className="dark:bg-gray-900">
+    <section className="dark:bg-slate-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2
           ref={titleRef}
@@ -91,7 +98,7 @@ export function FormContact() {
             <input
               type="email"
               id="email"
-              className="font-comfortaa shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              className="font-comfortaa shadow-sm bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="seu.email@exemplo.com"
               required
               value={email}
@@ -108,7 +115,7 @@ export function FormContact() {
             <input
               type="text"
               id="subject"
-              className="font-comfortaa block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              className="font-comfortaa block p-3 w-full text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-300 dark:border-gray-600 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Consulta sobre Projeto ou Colaboração"
               required
               value={subject}
@@ -125,7 +132,7 @@ export function FormContact() {
             <textarea
               id="message"
               rows="6"
-              className="font-comfortaa block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              className="font-comfortaa block p-2.5 w-full text-sm text-gray-900 dark:text-white bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-300 dark:border-gray-600 focus:ring-primary-500 focus:border-primary-500 dark:placeholder-gray-400 dark:focus:ring-primary-500 dark:focus:border-primary-500"
               placeholder="Fale-me sobre seu projeto ou necessidades."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
@@ -134,9 +141,10 @@ export function FormContact() {
           <button
             ref={buttonRef}
             type="submit"
-            className="py-3 px-5 text-sm font-comfortaa text-center text-white rounded-lg bg-black sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+            disabled={isLoading}
+            className="py-3 px-5 text-sm font-comfortaa text-center text-white rounded-lg bg-black dark:bg-gray-800 sm:w-fit hover:bg-gray-900 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           >
-            Enviar Mensagem
+            {isLoading ? "Enviando..." : "Enviar Mensagem"}
           </button>
         </form>
       </div>

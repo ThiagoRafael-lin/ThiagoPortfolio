@@ -70,24 +70,24 @@ export default function About() {
 
   return (
     <div>
-      <div className="flex items-center justify-center pt-32 gap-6">
+      <div className="flex flex-col lg:flex-row items-center justify-center pt-32 gap-6">
         <Image
           ref={photoRef}
           src={fotoThiago}
           alt="Foto do Thiago Rafael"
-          className="rounded-full border border-black"
+          className="rounded-full border-2 border-black dark:border-white"
           width={300}
         />
 
-        <div className="font-comfortaa text-xl">
+        <div className="font-comfortaa text-xl text-black dark:text-white">
           <p ref={nameRef} className="pb-2">
             <span className="font-comfortaaBold">Nome:</span> Thiago Domingues
             Rafael
           </p>
-          <p ref={ageRef} className="border-y-2 py-2">
+          <p ref={ageRef} className="border-y-2 border-black dark:border-white py-2">
             <span className="font-comfortaaBold">Idade:</span> 19 anos
           </p>
-          <p ref={FormationsRef} className="border-b-2 py-2">
+          <p ref={FormationsRef} className="border-b-2 border-black dark:border-white py-2">
             <span className="font-comfortaaBold">Formações:</span> Técnico em
             Desenvolvimento de Sistemas <br /> Técnico em Multimídia
           </p>

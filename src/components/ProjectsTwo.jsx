@@ -15,27 +15,27 @@ export const ProjectsTwo = ({
   tech4,
 }) => {
   return (
-    <div className="flex flex-row items-center w-full pb-24 px-12">
-      <div className="font-comfortaa pr-12 flex flex-col  gap-6 text-end">
-        <h2 className="font-comfortaaBold text-2xl text-[#211184]">{title}</h2>
-        <p>{description}</p>
-        <div className="flex gap-6 text-[#211184] justify-end">
-          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all">
+    <div className="flex flex-col lg:flex-row-reverse items-center w-full pb-24 px-12">
+      <div className="font-comfortaa pr-0 lg:pr-12 flex flex-col gap-6 text-start lg:text-end pt-6 lg:pt-0">
+        <h2 className="font-comfortaaBold text-2xl text-[#211184] dark:text-purple-400">{title}</h2>
+        <p className="text-black dark:text-white">{description}</p>
+        <div className="flex gap-6 text-[#211184] dark:text-purple-400 justify-start lg:justify-end flex-wrap">
+          <p className="border-[2px] border-black dark:border-white p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white hover:transition-all">
             {tech1}
           </p>
-          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
+          <p className="border-[2px] border-black dark:border-white p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white hover:transition-all ">
             {tech2}
           </p>
-          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
+          <p className="border-[2px] border-black dark:border-white p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white hover:transition-all ">
             {tech3}
           </p>
-          <p className="border-[2px] border-black p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black hover:transition-all ">
+          <p className="border-[2px] border-black dark:border-white p-2 text-[12px] font-comfortaaBold rounded-lg hover:text-white hover:bg-black dark:hover:text-black dark:hover:bg-white hover:transition-all ">
             {tech4}
           </p>
         </div>
-        <div className="flex gap-6 justify-end">
+        <div className="flex gap-6 justify-start lg:justify-end">
           <Link
-            className="flex gap-2 items-center hover:underline"
+            className="flex gap-2 items-center hover:underline text-black dark:text-white"
             href={"https://site-eteriali.vercel.app/"}
             target="_blank"
           >
@@ -43,16 +43,16 @@ export const ProjectsTwo = ({
               src={EyeViewer}
               width={25}
               alt="icone de olho"
-              className=""
+              className="dark:invert"
             />
             <p>Deploy</p>
           </Link>
           <Link
-            className="flex gap-2 items-center hover:underline"
+            className="flex gap-2 items-center hover:underline text-black dark:text-white"
             href={"https://github.com/ThiagoRafael-lin/SiteEteriali.git"}
             target="_blank"
           >
-            <Image src={Github} width={25} alt="icone do github" />
+            <Image src={Github} width={25} alt="icone do github" className="dark:invert" />
             <p>Git Hub</p>
           </Link>
         </div>
