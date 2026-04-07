@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ProjectsLeft, ProjectsRight } from "@/components/ProjectsOne";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import emailjs from "@emailjs/browser";
@@ -16,8 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const nameRef = useRef(null);
   const professionRef = useRef(null);
-  const scrollRefLeft = useRef(null);
-  const scrollRefRight = useRef(null);
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { duration: 0.7 } });
