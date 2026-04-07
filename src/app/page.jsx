@@ -81,7 +81,7 @@ export default function Home() {
         className="flex flex-col items-center justify-center gap-7 pt-48"
         ref={nameRef}
       >
-        <h2 className="text-black dark:text-white text-8xl font-comfortaa">Thiago Rafael</h2>
+        <h2 className="text-black dark:text-white text-8xl font-comfortaa bg-gradient-to-r from-accent-primary to-accent-secondary bg-clip-text">Thiago Rafael</h2>
         <p
           ref={professionRef}
           className="font-comfortaa text-3xl text-gray-400 dark:text-gray-500"
@@ -90,8 +90,8 @@ export default function Home() {
         </p>
         <div className="flex gap-6 flex-col lg:flex-row">
           <Button
-            className="bg-transparent border-black dark:border-white text-black dark:text-white rounded-lg font-comfortaa hover:bg-gray-100 dark:hover:bg-gray-800"
-            variant="outline"
+            className="bg-accent-primary text-white hover:opacity-90 dark:hover:opacity-80 border-0 rounded-lg font-comfortaa"
+            variant="default"
           >
             <a href="/ThiagoDominguesRafael.pdf" download>
               Baixar currículo
@@ -99,8 +99,8 @@ export default function Home() {
           </Button>
           <Link href="/screen-projects">
             <Button
-              className="bg-transparent border-black dark:border-white text-black dark:text-white rounded-lg font-comfortaa hover:bg-gray-100 dark:hover:bg-gray-800"
-              variant="outline"
+              className="bg-accent-secondary text-white hover:opacity-90 dark:hover:opacity-80 border-0 rounded-lg font-comfortaa"
+              variant="default"
             >
               Projetos
             </Button>

@@ -52,7 +52,7 @@ export const ProjectCard = ({
       {/* Conteúdo */}
       <div className="p-6 flex flex-col gap-4">
         {/* Título */}
-        <h3 className="font-comfortaaBold text-2xl text-black dark:text-white">
+        <h3 className="font-comfortaaBold text-2xl text-accent-primary">
           {title}
         </h3>
 
@@ -66,7 +66,7 @@ export const ProjectCard = ({
           {technologies.map((tech, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 text-xs font-comfortaa bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full border border-gray-300 dark:border-slate-600 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-200"
+              className="px-3 py-1 text-xs font-comfortaa bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-full border border-gray-300 dark:border-slate-600 hover:bg-accent-primary hover:text-white dark:hover:bg-accent-primary dark:hover:text-white transition-all duration-200"
             >
               {tech}
             </span>
@@ -81,7 +81,7 @@ export const ProjectCard = ({
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors font-comfortaa"
+              className="flex items-center gap-2 text-black dark:text-white hover:text-accent-primary transition-colors font-comfortaa"
             >
               {getLinkIcon(link.label)}
               <span className="text-sm">{link.label}</span>

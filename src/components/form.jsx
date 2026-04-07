@@ -76,7 +76,7 @@ export function FormContact() {
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2
           ref={titleRef}
-          className="font-comfortaaBold mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+          className="font-comfortaaBold mb-4 text-4xl tracking-tight font-extrabold text-center text-accent-primary"
         >
           Vamos nos Conectar
         </h2>
@@ -142,7 +142,7 @@ export function FormContact() {
             ref={buttonRef}
             type="submit"
             disabled={isLoading}
-            className="py-3 px-5 text-sm font-comfortaa text-center text-white rounded-lg bg-black dark:bg-gray-800 sm:w-fit hover:bg-gray-900 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:focus:ring-primary-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+            className="py-3 px-5 text-sm font-comfortaa text-center text-white rounded-lg bg-accent-primary sm:w-fit hover:opacity-90 dark:hover:opacity-80 focus:ring-4 focus:outline-none focus:ring-accent-primary disabled:opacity-50 disabled:cursor-not-allowed transition-all"
           >
             {isLoading ? "Enviando..." : "Enviar Mensagem"}
           </button>

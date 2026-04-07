@@ -48,25 +48,25 @@ export const Header = () => {
       <div ref={HeaderRef} className="hidden lg:flex gap-6">
         <Link
           href="/"
-          className="hover:text-gray-400 hover:underline transition-all delay-75"
+          className="hover:text-accent-primary hover:underline transition-all delay-75"
         >
           Início
         </Link>
         <Link
           href="/screen-projects"
-          className="hover:text-gray-400 hover:underline transition-all delay-75"
+          className="hover:text-accent-primary hover:underline transition-all delay-75"
         >
           Projetos
         </Link>
         <Link
           href="/screen-skills"
-          className="hover:text-gray-400 hover:underline transition-all delay-75"
+          className="hover:text-accent-primary hover:underline transition-all delay-75"
         >
           Habilidades
         </Link>
         <Link
           href="/screen-about"
-          className="hover:text-gray-400 hover:underline transition-all delay-75"
+          className="hover:text-accent-primary hover:underline transition-all delay-75"
         >
           Sobre mim
         </Link>
@@ -85,8 +85,8 @@ export const Header = () => {
         <Link href="/screen-contact">
           <Button
             ref={buttonRef}
-            className="bg-transparent border-black dark:border-white text-black dark:text-white rounded-lg font-comfortaa hover:bg-gray-100 dark:hover:bg-gray-800"
-            variant="outline"
+            className="bg-accent-primary text-white hover:opacity-90 dark:hover:opacity-80 border-0 rounded-lg font-comfortaa"
+            variant="default"
           >
             Contato
           </Button>

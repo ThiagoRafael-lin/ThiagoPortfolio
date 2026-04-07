@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import NextTalent from '@/assets/image/NextTalent.png';
+import Dashcripto from '@/assets/image/DashCripto.png';
 import Eteriali from '@/assets/image/Eteriali.png';
 import Event from '@/assets/image/Event+.png';
 import JogoSecreto from '@/assets/image/JogoSecreto.png';
@@ -15,15 +15,15 @@ const Header = dynamic(() => import('@/components/header').then(mod => ({ defaul
 const projectsData = [
   {
     id: 1,
-    title: 'Next Talent',
+    title: 'DashCripto',
     description:
-      'Next Talent é uma plataforma inovadora que otimiza processos seletivos, tornando a experiência mais eficiente para recrutadores e candidatos. Com uma interface interativa, oferece uma seção exclusiva para vagas e facilita candidaturas. Para recrutadores, disponibiliza telas dinâmicas que agilizam a seleção. O diferencial é o uso de inteligência artificial para automatizar e otimizar etapas.',
-    technologies: ['HTML', 'CSS', 'TypeScript', 'C#', 'API REST', 'MySQL', 'VS Code', 'VS Community'],
-    image: NextTalent,
-    imageAlt: 'Next Talent Platform',
+      'DashCripto é um dashboard moderno de criptomoedas que permite visualizar, de forma simples e intuitiva, quais moedas estão mais valorizadas no mercado e acompanhar suas variações em tempo real.',
+    technologies: ['HTML', 'CSS', 'TypeScript', 'VS Code'],
+    image: Dashcripto,
+    imageAlt: 'DashCripto',
     links: [
-      { label: 'Deploy', url: 'https://next-talent.vercel.app/' },
-      { label: 'Azure DevOps', url: 'https://dev.azure.com/NextTalent/_git/NextTalent?path=%2F&version=GBmain&_a=contents' }
+      { label: 'Deploy', url: 'https://dash-cripto-wheat.vercel.app/' },
+      { label: 'GitHub', url: 'https://github.com/ThiagoRafael-lin/DashCripto' }
     ]
   },
   {
@@ -87,7 +87,7 @@ export default function Project() {
       <div ref={containerRef} className="px-4 lg:px-12 py-16">
         {/* Título da seção */}
         <div className="text-center mb-16">
-          <h1 className="font-comfortaaBold text-4xl lg:text-5xl text-black dark:text-white mb-4">
+          <h1 className="font-comfortaaBold text-4xl lg:text-5xl text-accent-primary mb-4">
             Meus Projetos
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-lg font-comfortaa max-w-2xl mx-auto">

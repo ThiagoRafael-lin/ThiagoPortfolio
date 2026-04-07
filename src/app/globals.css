@@ -5,6 +5,72 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
+  background: linear-gradient(135deg, #d4dff8 0%, #e8e6ff 50%, #d4e8ff 100%);
+  background-attachment: fixed;
+}
+
+html.dark body {
+  background: linear-gradient(135deg, #0a0f1d 0%, #1a1f35 50%, #0d1425 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(59, 130, 246, 0.08) 25%, rgba(59, 130, 246, 0.08) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.08) 75%, rgba(59, 130, 246, 0.08) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(59, 130, 246, 0.08) 25%, rgba(59, 130, 246, 0.08) 26%, transparent 27%, transparent 74%, rgba(59, 130, 246, 0.08) 75%, rgba(59, 130, 246, 0.08) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+html.dark body::before {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(30, 41, 59, 0.2) 25%, rgba(30, 41, 59, 0.2) 26%, transparent 27%, transparent 74%, rgba(30, 41, 59, 0.2) 75%, rgba(30, 41, 59, 0.2) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(30, 41, 59, 0.2) 25%, rgba(30, 41, 59, 0.2) 26%, transparent 27%, transparent 74%, rgba(30, 41, 59, 0.2) 75%, rgba(30, 41, 59, 0.2) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.85;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.30), transparent 25%),
+    radial-gradient(circle at 75% 15%, rgba(124, 58, 237, 0.25), transparent 22%),
+    radial-gradient(circle at 50% 80%, rgba(99, 102, 241, 0.22), transparent 28%);
+  filter: blur(120px);
+  animation: blob-move 24s ease-in-out infinite;
+}
+
+html.dark body::after {
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(148, 163, 184, 0.14), transparent 25%),
+    radial-gradient(circle at 75% 15%, rgba(100, 116, 139, 0.12), transparent 22%),
+    radial-gradient(circle at 50% 80%, rgba(71, 85, 105, 0.16), transparent 28%);
+}
+
+@keyframes blob-move {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(8%, -6%) scale(1.02);
+  }
+  66% {
+    transform: translate(-7%, 5%) scale(0.98);
+  }
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -37,6 +103,8 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --primary-accent: 217 91% 60%;
+    --secondary-accent: 262 80% 50%;
     --radius: 0.5rem;
   }
   .dark {
@@ -64,6 +132,8 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --primary-accent: 217 91% 60%;
+    --secondary-accent: 262 80% 50%;
   }
 }
 
@@ -73,5 +143,23 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-accent-primary {
+    @apply text-[hsl(var(--primary-accent))];
+  }
+  
+  .text-accent-secondary {
+    @apply text-[hsl(var(--secondary-accent))];
+  }
+  
+  .bg-accent-primary {
+    @apply bg-[hsl(var(--primary-accent))];
+  }
+  
+  .bg-accent-secondary {
+    @apply bg-[hsl(var(--secondary-accent))];
   }
 }

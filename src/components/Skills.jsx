@@ -43,7 +43,7 @@ export const Skills = () => {
   return (
     <div className="flex justify-center items-start pt-32 gap-12 flex-wrap">
       <div ref={backRef} className="flex flex-col items-center">
-        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Backend</h2>
+        <h2 className="font-comfortaaBold text-2xl text-accent-primary">Backend</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={csharp} width={40} alt="C#" />
@@ -63,7 +63,7 @@ export const Skills = () => {
             <p className="text-center text-sm mt-2 font-comfortaa text-black dark:text-white">ASP.NET</p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Ferramentas</h2>
+        <h2 className="font-comfortaaBold text-2xl text-accent-primary">Ferramentas</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={git} width={40} alt="Git" />
@@ -80,7 +80,7 @@ export const Skills = () => {
         ref={frontRef}
         className="flex flex-col items-center border-x-2 border-black dark:border-white px-14"
       >
-        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Frontend</h2>
+        <h2 className="font-comfortaaBold text-2xl text-accent-primary">Frontend</h2>
         <div className="flex flex-col gap-12 justify-center items-center py-12">
           <div className="flex gap-12">
             <div className="flex flex-col items-center">
@@ -152,7 +152,7 @@ export const Skills = () => {
       </div>
 
       <div ref={ideRef} className="flex flex-col items-center">
-        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">IDEs</h2>
+        <h2 className="font-comfortaaBold text-2xl text-accent-primary">IDEs</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={visualcode} width={40} alt="Visual Studio Code" />
@@ -169,7 +169,7 @@ export const Skills = () => {
             </p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl text-black dark:text-white">Metodologias</h2>
+        <h2 className="font-comfortaaBold text-2xl text-accent-primary">Metodologias</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={azureDevops} width={40} alt="Azure DevOps" />
