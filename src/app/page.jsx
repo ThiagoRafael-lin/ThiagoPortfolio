@@ -96,7 +96,7 @@ export default function Home() {
             variant="outline"
           >
             <a href="/ThiagoDominguesRafael.pdf" download>
-              Download curriculum
+              Baixar currículo
             </a>
           </Button>
           <Link href="/screen-projects">

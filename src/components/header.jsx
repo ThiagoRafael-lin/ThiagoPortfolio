@@ -39,25 +39,25 @@ export const Header = () => {
           href="/"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
-          Home
+          Início
         </Link>
         <Link
           href="/screen-projects"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
-          Projects
+          Projetos
         </Link>
         <Link
           href="/screen-skills"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
-          Skills
+          Habilidades
         </Link>
         <Link
           href="/screen-about"
           className="hover:text-gray-400 hover:underline transition-all delay-75"
         >
-          About Me
+          Sobre mim
         </Link>
       </div>
       <Link href="/screen-contact">
@@ -66,7 +66,7 @@ export const Header = () => {
           className="bg-transparent border-black  text-black rounded-lg font-comfortaa"
           variant="outline"
         >
-          Contact
+          Contato
         </Button>
       </Link>
     </nav>

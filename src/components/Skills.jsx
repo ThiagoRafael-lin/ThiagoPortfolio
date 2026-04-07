@@ -63,7 +63,7 @@ export const Skills = () => {
             <p className="text-center text-sm mt-2 font-comfortaa">ASP.NET</p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl ">Tools</h2>
+        <h2 className="font-comfortaaBold text-2xl ">Ferramentas</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={git} width={40} alt="Git" />
@@ -169,7 +169,7 @@ export const Skills = () => {
             </p>
           </div>
         </div>
-        <h2 className="font-comfortaaBold text-2xl">Methodologies</h2>
+        <h2 className="font-comfortaaBold text-2xl">Metodologias</h2>
         <div className="flex gap-12 py-12">
           <div className="flex flex-col items-center">
             <Image src={azureDevops} width={40} alt="Azure DevOps" />

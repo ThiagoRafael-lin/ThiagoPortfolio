@@ -81,18 +81,18 @@ export default function About() {
 
         <div className="font-comfortaa text-xl">
           <p ref={nameRef} className="pb-2">
-            <span className="font-comfortaaBold">Name:</span> Thiago Domingues
+            <span className="font-comfortaaBold">Nome:</span> Thiago Domingues
             Rafael
           </p>
           <p ref={ageRef} className="border-y-2 py-2">
-            <span className="font-comfortaaBold">Age:</span> 19 years old
+            <span className="font-comfortaaBold">Idade:</span> 19 anos
           </p>
           <p ref={FormationsRef} className="border-b-2 py-2">
-            <span className="font-comfortaaBold">Formations:</span> Systems
-            Development Technician <br /> Multimedia Technician
+            <span className="font-comfortaaBold">Formações:</span> Técnico em
+            Desenvolvimento de Sistemas <br /> Técnico em Multimídia
           </p>
           <p ref={localityRef} className="pt-2">
-            <span className="font-comfortaaBold">locality:</span> São Paulo, SP
+            <span className="font-comfortaaBold">Localidade:</span> São Paulo, SP
           </p>
         </div>
       </div>

@@ -16,7 +16,7 @@ const ComfortaaBold = localFont({
 
 export const metadata = {
   title: "ThiagoRafael",
-  description: "meu portfolio profissonal",
+  description: "meu portfólio profissional",
 };
 
 export default function RootLayout({ children }) {

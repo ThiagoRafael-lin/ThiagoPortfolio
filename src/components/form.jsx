@@ -71,13 +71,13 @@ export function FormContact() {
           ref={titleRef}
           className="font-comfortaaBold mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
         >
-          Let's Connect
+          Vamos nos Conectar
         </h2>
         <p
           ref={subTitleRef}
           className="font-comfortaa mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
         >
-          Interested in collaborating? Have a project in mind? Get in touch!
+          Interessado em colaborar? Tem um projeto em mente? Entre em contato!
         </p>
 
         <form action="#" onSubmit={handleSubmit} className="space-y-8">
@@ -86,13 +86,13 @@ export function FormContact() {
               htmlFor="email"
               className="block mb-2 text-sm font-comfortaa text-gray-900 dark:text-gray-300"
             >
-              Your Email
+              Seu Email
             </label>
             <input
               type="email"
               id="email"
               className="font-comfortaa shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="your.email@example.com"
+              placeholder="seu.email@exemplo.com"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -103,13 +103,13 @@ export function FormContact() {
               htmlFor="subject"
               className="block mb-2 text-sm font-comfortaa text-gray-900 dark:text-gray-300"
             >
-              Subject
+              Assunto
             </label>
             <input
               type="text"
               id="subject"
               className="font-comfortaa block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-              placeholder="Project Inquiry or Collaboration"
+              placeholder="Consulta sobre Projeto ou Colaboração"
               required
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
@@ -120,13 +120,13 @@ export function FormContact() {
               htmlFor="message"
               className="block mb-2 text-sm font-comfortaa text-gray-900 dark:text-gray-400"
             >
-              Your Message
+              Sua Mensagem
             </label>
             <textarea
               id="message"
               rows="6"
               className="font-comfortaa block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="Tell me about your project or needs."
+              placeholder="Fale-me sobre seu projeto ou necessidades."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
@@ -136,7 +136,7 @@ export function FormContact() {
             type="submit"
             className="py-3 px-5 text-sm font-comfortaa text-center text-white rounded-lg bg-black sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
           >
-            Send Message
+            Enviar Mensagem
           </button>
         </form>
       </div>
